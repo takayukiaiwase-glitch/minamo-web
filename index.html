@@ -11,7 +11,7 @@
 <style>
 :root{--dark:#2C2418;--dark-soft:#3D3428;--brown:#8B7355;--brown-light:#A89478;--cream:#F8F5F0;--cream-dark:#F0EBE3;--white:#FFFFFF;--accent:#C4956A;--line:#D0C8BC;--text:#3D3428;--text-light:#5A4E3F;--font-display:'Cormorant Garamond',serif;--font-body:'Noto Sans JP',sans-serif;--font-accent:'DM Sans',sans-serif}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-body);color:var(--text);background:var(--white);line-height:1.8;font-weight:300;-webkit-font-smoothing:antialiased}img{max-width:100%;display:block}
 nav{position:fixed;top:0;width:100%;z-index:100;padding:1rem 2rem;transition:all .4s ease;background:transparent}nav.scrolled{background:rgba(248,245,240,.95);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}nav .nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}nav .nav-logo{font-family:var(--font-display);font-size:1.4rem;letter-spacing:.15em;color:var(--white);text-decoration:none;font-weight:400;transition:color .4s}nav.scrolled .nav-logo{color:var(--dark)}nav .nav-links{display:flex;gap:2rem;list-style:none}nav .nav-links a{font-size:.75rem;letter-spacing:.1em;color:rgba(255,255,255,.8);text-decoration:none;font-weight:300;transition:color .3s}nav.scrolled .nav-links a{color:var(--brown)}nav .nav-links a:hover{color:var(--accent)}
-.hero{height:100vh;min-height:700px;background:var(--dark);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(139,115,85,.15) 0%,transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(196,149,106,.1) 0%,transparent 50%)}.hero-content{position:relative;z-index:1;animation:fadeUp 1.2s ease-out}@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.hero-brand{font-family:var(--font-display);font-size:clamp(3rem,8vw,6rem);color:var(--cream-dark);letter-spacing:.2em;font-weight:300}.hero-line{width:60px;height:1px;background:var(--brown);margin:1.5rem auto}.hero-tagline{font-size:clamp(.85rem,2vw,1.1rem);color:var(--brown-light);font-weight:200;letter-spacing:.15em}.hero-sub{font-family:var(--font-accent);font-size:.8rem;color:var(--brown);letter-spacing:.1em;font-style:italic;margin-top:1rem}.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:var(--brown);font-size:.7rem;letter-spacing:.2em;animation:pulse 2s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+.hero{height:100vh;min-height:700px;background:var(--dark);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(139,115,85,.15) 0%,transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(196,149,106,.1) 0%,transparent 50%)}.hero-content{position:relative;z-index:1;animation:fadeUp 1.2s ease-out;padding:0 1.5rem;max-width:900px}.hero-mark{margin:0 auto 2rem}.hero-mark img{width:90px;height:auto;display:block;margin:0 auto}@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.hero-headline{font-family:var(--font-display);font-size:clamp(1.7rem,4.5vw,3rem);color:var(--cream-dark);letter-spacing:.05em;font-weight:300;line-height:1.55;margin-bottom:0}.hero-line{width:60px;height:1px;background:var(--brown);margin:2rem auto}.hero-subcopy{margin-bottom:2rem}.hero-subcopy-1{font-size:clamp(.85rem,1.6vw,1.05rem);color:var(--brown-light);font-weight:300;letter-spacing:.1em;margin-bottom:.6rem}.hero-subcopy-2{font-family:var(--font-accent);font-size:clamp(.82rem,1.5vw,.98rem);color:var(--brown-light);font-weight:300;letter-spacing:.04em}.hero-coe{color:var(--accent);font-weight:500;font-size:1.08em;letter-spacing:.02em}.hero-status{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem .8rem;font-family:var(--font-accent);font-size:.7rem;color:var(--brown);letter-spacing:.15em;text-transform:uppercase;margin:0 auto 2.5rem}.hero-status-divider{color:rgba(139,115,85,.5)}.hero-cta{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2rem;border:1px solid var(--brown);color:var(--cream-dark);text-decoration:none;font-family:var(--font-accent);font-size:.82rem;letter-spacing:.1em;transition:all .3s ease;background:rgba(139,115,85,.08)}.hero-cta:hover{background:var(--brown);color:var(--white);transform:translateY(-2px)}.hero-cta-icon{font-size:.55rem;transform:translateY(-1px)}.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:var(--brown);font-size:.7rem;letter-spacing:.2em;animation:pulse 2s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
 section{padding:6rem 2rem}.section-inner{max-width:1000px;margin:0 auto}.section-label{font-family:var(--font-accent);font-size:.7rem;letter-spacing:.3em;color:var(--brown);text-transform:uppercase;margin-bottom:.5rem}.section-title{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);color:var(--dark);font-weight:400;line-height:1.3;margin-bottom:1rem}.section-title .num{font-family:var(--font-accent);font-size:1.15em;color:var(--accent);font-weight:500;letter-spacing:.02em;margin:0 .05em;vertical-align:baseline}.section-line{width:40px;height:1px;background:var(--brown);margin-bottom:2.5rem}
 .origin{background:var(--cream)}.origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:2rem}.origin-photo{background:var(--cream-dark);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:var(--brown-light);font-size:.85rem;border:1px solid var(--line);overflow:hidden}.origin-text h3{font-size:1.1rem;color:var(--dark);margin-bottom:1rem;font-weight:500}.origin-text p{font-size:.95rem;color:var(--text-light);margin-bottom:1.5rem;line-height:2}
 .origin-video-section{margin:2.5rem 0;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}.video-embed{position:relative;background:var(--dark-soft);border:1px solid rgba(139,115,85,.3);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;overflow:hidden}.video-embed .play-icon{width:50px;height:50px;border:2px solid var(--brown);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--brown);font-size:1.2rem;transition:all .3s}.video-embed:hover .play-icon{background:rgba(139,115,85,.2)}.video-embed>span{font-size:.75rem;color:var(--brown-light);letter-spacing:.05em}.video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:none}.video-caption{padding-top:.5rem}.video-caption h4{font-size:.95rem;color:var(--dark);font-weight:500;margin-bottom:.5rem}.video-caption p{font-size:.85rem;color:var(--text-light);line-height:1.8}
@@ -43,10 +43,26 @@ footer{background:var(--dark);border-top:1px solid rgba(139,115,85,.2);padding:2
 
 <section class="hero" id="top">
   <div class="hero-content">
-    <h1 class="hero-brand">minamo</h1>
+    <div class="hero-mark"><img src="minamo-logo-circle-v3.png" alt="minamo"></div>
+    <h1 class="hero-headline">タイ最高峰のスペシャルティを<br>日本のロースターへ</h1>
     <div class="hero-line"></div>
-    <p class="hero-tagline">タイ・チェンマイ産スペシャルティコーヒー</p>
-    <p class="hero-sub">Specialty Green Coffee Trading — Yokohama, Japan</p>
+    <div class="hero-subcopy">
+      <p class="hero-subcopy-1">Yosniyom Coffee Farm 日本総代理店</p>
+      <p class="hero-subcopy-2">Cup of Excellence Thailand <span class="hero-coe">2024年 4位</span>・<span class="hero-coe">2025年 8位</span> 連続入賞</p>
+    </div>
+    <div class="hero-status">
+      <span>MOQ 5kg</span>
+      <span class="hero-status-divider">／</span>
+      <span>ダイレクトトレード</span>
+      <span class="hero-status-divider">／</span>
+      <span>2026年ロット販売中</span>
+    </div>
+    <div>
+      <a href="#terms" class="hero-cta">
+        <span class="hero-cta-icon">▶</span>
+        <span>サンプル・お見積りのご相談はこちら</span>
+      </a>
+    </div>
   </div>
   <div class="hero-scroll">SCROLL</div>
 </section>
@@ -88,7 +104,7 @@ footer{background:var(--dark);border-top:1px solid rgba(139,115,85,.2);padding:2
       </div>
     </div>
 
-    <p style="font-size:.85rem;color:var(--text-light);margin:1rem 0 2rem;line-height:2;">収穫後すぐに行う水槽での比重選別は、欠点豆を除去するスペシャルティコーヒー品質管理の要。Yosniyom Coffee Farmでは水洗いと選別を丁寧に重ねた後、Wash／Carbonic Maceration／Natural Chaptalizationの各プロセスへと進みます。</p>
+    <p style="font-size:.85rem;color:var(--text-light);margin:1rem 0 2rem;line-height:2;">収穫後すぐに行う水槽での比重選別は、欠点豆を除去するスペシャルティコーヒー品質管理の要。Yosniyom Coffee Farmでは水洗いと選別を丁寧に重ねた後、Wash／Anaerobic／Chaptalizationの各プロセスへと進みます。</p>
 
     <div class="origin-specs fade-in">
       <div><div class="origin-spec-label">標高</div><div class="origin-spec-value">1,300〜1,350m</div></div>
@@ -327,7 +343,7 @@ footer{background:var(--dark);border-top:1px solid rgba(139,115,85,.2);padding:2
         <div class="terms-block-body">
           <p>価格は在庫状況・数量によりご案内が異なるため、お見積り制とさせていただいております。<br>EメールまたはInstagramのDMより、以下の情報とあわせてご連絡ください：</p>
           <ul class="terms-inner-list">
-            <li>ご希望のプロセス（Wash / Carbonic Maceration / Natural Chaptalization）</li>
+            <li>ご希望のプロセス（Wash / CM / Chap）</li>
             <li>ご希望の数量</li>
             <li>お届け先</li>
           </ul>
