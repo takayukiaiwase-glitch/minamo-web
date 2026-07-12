@@ -636,6 +636,22 @@ if(contactForm){
 }
 </script>
 <script src="https://web3forms.com/client/script.js" async defer></script>
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bce01e5fb2cd4506a1cbe8b735e87b22"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics (excludes admin via ?admin=1 flag) -->
+<script>
+(function(){
+  if (new URLSearchParams(location.search).has('admin')) {
+    localStorage.setItem('minamo_admin', '1');
+    console.log('[minamo] Admin mode activated - analytics disabled for this browser.');
+  }
+  if (localStorage.getItem('minamo_admin') !== '1') {
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    s.setAttribute('data-cf-beacon', '{"token": "bce01e5fb2cd4506a1cbe8b735e87b22"}');
+    document.body.appendChild(s);
+  }
+})();
+</script>
+<!-- End Cloudflare Web Analytics -->
 </body>
 </html>
