@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://minamo-trading.com/sitemap.xml
