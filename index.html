@@ -141,6 +141,24 @@ footer{background:var(--dark);border-top:1px solid rgba(139,115,85,.2);padding:2
     <div class="section-line fade-in"></div>
     <ul class="news-list fade-in">
       <article class="news-item">
+        <time class="news-date" datetime="2026-09-14">2026.09.14</time>
+        <span class="news-category cat-event">イベント</span>
+        <h3 class="news-title">イベント参加のお知らせ：珈琲カッピング＆テイスティングセッション（相鉄線・希望が丘）</h3>
+        <div class="news-body">
+          <p>2026年10月9日（金）、希望が丘チャレンジベースにて開催される「珈琲カッピング＆テイスティングセッション」にminamoが参加いたします。</p>
+          <p>ツナグコーヒーマルシェ主催による本イベントは、相鉄線沿線での初開催となるツナグイベントです。アジアの生豆インポーター3社（タイ・パプアニューギニア・ネパール）が集い、それぞれの産地の生豆をその場でカッピング・テイスティングいただけます。マイクロロースターの方はもちろん、自家焙煎愛好家からコーヒーがお好きな方まで、どなたでもご参加いただけます。</p>
+          <p>minamoからは Yosniyom Coffee Farm の Wash・Carbonic Maceration・Natural Chaptalization の3プロセスをお持ちします。会場ではボサノヴァユニット TRÈS COPOS の生演奏（19:00〜／20:30〜）や、クラフトビールなどのフード＆ドリンクもお楽しみいただけます。</p>
+          <div class="news-details">
+            <p><strong>日時：</strong>2026年10月9日（金）18:00〜22:00</p>
+            <p><strong>会場：</strong>希望が丘チャレンジベース（相鉄線・希望が丘駅南口 徒歩1分）</p>
+            <p><strong>参加費：</strong>1,000円（BtoB商談メインの方は事前申込にて無料）</p>
+            <p><strong>主催：</strong>ツナグコーヒーマルシェ</p>
+            <p><strong>お申込み：</strong><a href="https://peatix.com/event/5166745" target="_blank" rel="noopener">https://peatix.com/event/5166745</a></p>
+          </div>
+          <p class="news-note">※事前予約制のため、ご来場前にPeatixからのお申込みをお願いいたします。</p>
+        </div>
+      </article>
+      <article class="news-item">
         <time class="news-date" datetime="2026-09-08">2026.09.08</time>
         <span class="news-category cat-media">Media</span>
         <h3 class="news-title">note公開のお知らせ：Yosniyom Washedを5段階で焙煎した検証レポート</h3>
@@ -1096,8 +1114,8 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{a.addEventListener('cl
   const toggleWrap=document.getElementById('newsToggleWrap');
   const toggleBtn=document.getElementById('newsToggle');
   if(!items.length||!toggleBtn||!toggleWrap)return;
-  if(items.length<=3){toggleWrap.style.display='none';return;}
-  items.forEach((item,idx)=>{if(idx>=3)item.classList.add('news-hidden');});
+  if(items.length<=2){toggleWrap.style.display='none';return;}
+  items.forEach((item,idx)=>{if(idx>=2)item.classList.add('news-hidden');});
   toggleBtn.addEventListener('click',()=>{
     items.forEach(item=>item.classList.remove('news-hidden'));
     toggleWrap.style.display='none';
