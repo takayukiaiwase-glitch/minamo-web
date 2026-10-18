@@ -112,6 +112,34 @@ nav.open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)
   body.menu-open{overflow:hidden}
 }
 </style>
+<style>
+.faq{background:var(--cream-dark)}
+.faq-group{margin-bottom:2.5rem}
+.faq-group-title{font-size:.95rem;font-weight:500;color:var(--brown);letter-spacing:.1em;margin-bottom:.8rem;padding-bottom:.6rem;border-bottom:1px solid var(--line)}
+.faq-item{background:var(--white);border:1px solid var(--line);margin-bottom:.6rem}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:flex-start;gap:.9rem;padding:1.1rem 1.2rem;-webkit-tap-highlight-color:transparent}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-q{font-family:var(--font-display);font-size:1.3rem;line-height:1;color:var(--accent);flex-shrink:0;margin-top:.1rem}
+.faq-q-text{flex:1;font-size:.92rem;color:var(--dark);line-height:1.7}
+.faq-icon{position:relative;width:14px;height:14px;flex-shrink:0;margin-top:.45rem}
+.faq-icon::before,.faq-icon::after{content:"";position:absolute;left:0;top:6px;width:14px;height:1.5px;background:var(--brown);transition:transform .25s}
+.faq-icon::after{transform:rotate(90deg)}
+.faq-item[open] .faq-icon::after{transform:rotate(0)}
+.faq-a{padding:0 1.2rem 1.2rem 3.4rem}
+.faq-a p{font-size:.88rem;color:var(--text-light);line-height:1.9}
+.faq-ship{margin-top:1rem}
+.faq-ship summary{cursor:pointer;display:inline-block;font-size:.82rem;color:var(--accent);border-bottom:1px solid var(--brown);padding-bottom:1px}
+.faq-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:.8rem;border:1px solid var(--line)}
+.faq-table{border-collapse:collapse;font-size:.75rem;white-space:nowrap;min-width:100%}
+.faq-table th,.faq-table td{border:1px solid var(--line);padding:.5rem .6rem;text-align:center}
+.faq-table thead th{background:var(--cream);color:var(--dark);font-weight:500;vertical-align:top}
+.faq-table th small{display:block;font-size:.62rem;color:var(--text-light);font-weight:400;white-space:normal;max-width:7.5em;margin:.2rem auto 0;line-height:1.4}
+.faq-table tbody th{background:var(--cream);font-weight:500;position:sticky;left:0}
+.faq-table thead th:first-child{position:sticky;left:0;z-index:1}
+.faq-table td{color:var(--text)}.faq-table small.nw{white-space:nowrap;max-width:none}
+.faq-table-note{font-size:.72rem!important;margin-top:.4rem}
+@media(max-width:768px){.faq-a{padding:0 1rem 1.1rem 1rem}.faq-item summary{padding:1rem}}
+</style>
 </head>
 <body>
 
@@ -124,6 +152,7 @@ nav.open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)
       <li><a href="#lineup">ラインナップ</a></li>
       <li><a href="#voices">ロースターの声</a></li>
       <li><a href="#terms">お取引について</a></li>
+      <li><a href="#faq">よくある質問</a></li>
       <li><a href="#news">お知らせ</a></li>
       <li><a href="#about">私たちについて</a></li>
       <li><a href="#contact">お問い合わせ</a></li>
@@ -917,6 +946,40 @@ nav.open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)
   </div>
 </section>
 
+<section class="faq" id="faq">
+  <div class="section-inner">
+    <div class="section-label fade-in">FAQ</div>
+    <h2 class="section-title fade-in">よくあるご質問</h2>
+    <div class="section-line fade-in"></div>
+<div class="faq-group fade-in"><h3 class="faq-group-title">ご注文・在庫</h3>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">在庫はいつまでありますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>当年分はなくなり次第終了です。最新の在庫状況はお問い合わせください。Yosniyom Coffee Farmの生豆は、毎年、収穫を終えた2月にプリオーダーを受け付け、受注生産をしております。農園にも在庫がないため、同年クロップの追加購入はできません。</p></div></details>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">次の入荷はいつですか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>2027年クロップは同年6～7月の入港を予定しております。</p></div></details>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">2027年クロップの予約はできますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>可能です。農園にプリオーダーをかける2月中旬まで、予約を受け付けております。</p></div></details>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">価格を教えてください。</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>ロット・数量・配送先に応じてお見積りを個別にお出ししているため、EmailやDMからお問い合わせください。</p></div></details>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">1kgなど、5kg未満でも買えますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>原則は5kg単位の販売です。5kg/袋の梱包形態で農園から輸入しているためです。5kg未満の小分けはご相談ください。定常サービスとしてお約束できるものではございません。</p></div></details>
+</div>
+<div class="faq-group fade-in"><h3 class="faq-group-title">サンプル</h3>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">サンプルは有料ですか？ 何gですか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>生豆のサンプルは有料です。焙煎のバッチに合わせて任意の数量にてお求めいただけます。</p></div></details>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">焙煎済みのサンプルはありますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>サンプルロースターをお持ちではないロースター様向けに、焙煎豆のサンプルをご用意しております。個人のお客様向けには焙煎豆のサンプルはご提供しておりません。</p></div></details>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">サンプルが届くまで、どのくらいかかりますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>生豆のサンプルは、お申込みから3営業日以内に発送いたします。焙煎豆のサンプルは、焙煎のタイミング次第であり、発送までにお時間をいただく可能性もございます。</p></div></details>
+</div>
+<div class="faq-group fade-in"><h3 class="faq-group-title">配送・お支払い</h3>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">送料はいくらですか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>送料はヤマト運輸の法人価格となります。以下が弊社（横浜）からの発送料金です。例えば、5kgのご注文の場合は包材の重量もあり、10kg以内の金額となります。例：東京都への5kgの発送の場合は1,390円（税抜）。</p><details class="faq-ship"><summary>宅急便運賃表を見る（税抜・横浜発）</summary><div class="faq-table-wrap"><table class="faq-table"><thead><tr><th scope="col">サイズ<small class="nw">重量</small></th><th scope="col">北海道<small>北海道</small></th><th scope="col">北東北<small>青森・岩手・秋田</small></th><th scope="col">南東北<small>宮城・山形・福島</small></th><th scope="col">関東<small>茨城・栃木・群馬・埼玉・千葉・東京・神奈川・山梨</small></th><th scope="col">信越<small>新潟・長野</small></th><th scope="col">北陸<small>富山・石川・福井</small></th><th scope="col">中部<small>岐阜・静岡・愛知・三重</small></th><th scope="col">関西<small>滋賀・京都・大阪・兵庫・奈良・和歌山</small></th><th scope="col">中国<small>鳥取・島根・岡山・広島・山口</small></th><th scope="col">四国<small>徳島・香川・愛媛・高知</small></th><th scope="col">九州<small>福岡・佐賀・長崎・熊本・大分・宮崎・鹿児島</small></th><th scope="col">沖縄<small>沖縄</small></th></tr></thead><tbody><tr><th scope="row">60<small class="nw">2kg以内</small></th><td>1,320</td><td>960</td><td>850</td><td>850</td><td>850</td><td>850</td><td>850</td><td>960</td><td>1,080</td><td>1,080</td><td>1,320</td><td>1,320</td></tr><tr><th scope="row">80<small class="nw">5kg以内</small></th><td>1,580</td><td>1,220</td><td>1,110</td><td>1,110</td><td>1,110</td><td>1,110</td><td>1,110</td><td>1,220</td><td>1,340</td><td>1,340</td><td>1,580</td><td>1,880</td></tr><tr><th scope="row">100<small class="nw">10kg以内</small></th><td>1,860</td><td>1,500</td><td>1,390</td><td>1,390</td><td>1,390</td><td>1,390</td><td>1,390</td><td>1,500</td><td>1,620</td><td>1,620</td><td>1,860</td><td>2,460</td></tr><tr><th scope="row">120<small class="nw">15kg以内</small></th><td>2,370</td><td>1,970</td><td>1,850</td><td>1,850</td><td>1,850</td><td>1,850</td><td>1,850</td><td>1,970</td><td>2,100</td><td>2,100</td><td>2,370</td><td>3,050</td></tr><tr><th scope="row">140<small class="nw">20kg以内</small></th><td>2,950</td><td>2,520</td><td>2,390</td><td>2,390</td><td>2,390</td><td>2,390</td><td>2,390</td><td>2,520</td><td>2,660</td><td>2,660</td><td>2,950</td><td>3,660</td></tr><tr><th scope="row">160<small class="nw">25kg以内</small></th><td>3,300</td><td>2,870</td><td>2,740</td><td>2,740</td><td>2,740</td><td>2,740</td><td>2,740</td><td>2,870</td><td>3,010</td><td>3,010</td><td>3,300</td><td>4,250</td></tr><tr><th scope="row">180<small class="nw">30kg以内</small></th><td>4,740</td><td>4,070</td><td>3,340</td><td>3,340</td><td>3,340</td><td>3,340</td><td>3,340</td><td>4,070</td><td>4,450</td><td>4,450</td><td>4,740</td><td>6,550</td></tr><tr><th scope="row">200<small class="nw">30kg以内</small></th><td>5,940</td><td>4,910</td><td>4,060</td><td>4,060</td><td>4,060</td><td>4,060</td><td>4,060</td><td>4,910</td><td>5,650</td><td>5,650</td><td>5,940</td><td>8,050</td></tr></tbody></table></div><p class="faq-table-note">※表は横にスクロールできます。単位：円（税抜）</p></details></div></details>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">注文から届くまでの日数は？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>ご注文から3営業日以内に発送いたします。発送先にもよりますが、最短ではご注文日の翌日に発送し、翌々日に到着します。</p></div></details>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">支払い方法は？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>原則は銀行振り込み（前払い）にてお願いしております。請求書に銀行口座を記載しております。</p></div></details>
+</div>
+<div class="faq-group fade-in"><h3 class="faq-group-title">品質・豆について</h3>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">タイのスペシャルティコーヒーには、どんな特徴がありますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>標高が高くないこともあり豆自体には尖った酸味はありません。Washは優しい黒糖のような甘みやアーシーさなど農園のテロワールを感じられます。タイでは特殊発酵に挑戦する農家が多くあり、Yosniyom Coffee Farmもその一つです。嫌気性発酵などによりフルーティーさ、ベリー感、チェリー由来の甘さを引き出すプロセスもございます。</p></div></details>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">3つのプロセスは、どう選べばいいですか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>毎日のコーヒーとしてはWash、食後の〆にはCarbonic Maceration、特別な一杯はNatural Chaptalizationなど、味わいによってお店のアクセントとなるようなご提案をしております。</p></div></details>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">農園を訪問したり、生産者と交流したりすることはできますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>将来的には農園ツアーなどを企画していきたいと考えております。また、日本でのイベントに農園主を招待するなども検討中です。</p></div></details>
+</div>
+<div class="faq-group fade-in"><h3 class="faq-group-title">お取引全般</h3>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">個人でも購入できますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>原則はロースター様限定ですが、展示会などのイベント時は、個人のお客様へも販売しております。展示会後には、在庫限りで個人のお客様への販売を行う可能性もございます。まずはお問い合わせください。</p></div></details>
+<details class="faq-item"><summary><span class="faq-q">Q</span><span class="faq-q-text">継続して購入する場合、優先的に確保してもらえますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-a"><p>新クロップの予約や、当年クロップのお取り置きなどを柔軟にいたします。</p></div></details>
+</div>
+  </div>
+</section>
+
 <section class="news" id="news">
   <div class="section-inner">
     <div class="section-label fade-in">News</div>
@@ -1298,6 +1361,9 @@ btn.addEventListener('click',function(){setOpen(!nav.classList.contains('open'))
 nav.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){setOpen(false);});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
 window.addEventListener('resize',function(){if(window.innerWidth>768)setOpen(false);});})();
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "在庫はいつまでありますか？", "acceptedAnswer": {"@type": "Answer", "text": "当年分はなくなり次第終了です。最新の在庫状況はお問い合わせください。Yosniyom Coffee Farmの生豆は、毎年、収穫を終えた2月にプリオーダーを受け付け、受注生産をしております。農園にも在庫がないため、同年クロップの追加購入はできません。"}}, {"@type": "Question", "name": "次の入荷はいつですか？", "acceptedAnswer": {"@type": "Answer", "text": "2027年クロップは同年6～7月の入港を予定しております。"}}, {"@type": "Question", "name": "2027年クロップの予約はできますか？", "acceptedAnswer": {"@type": "Answer", "text": "可能です。農園にプリオーダーをかける2月中旬まで、予約を受け付けております。"}}, {"@type": "Question", "name": "価格を教えてください。", "acceptedAnswer": {"@type": "Answer", "text": "ロット・数量・配送先に応じてお見積りを個別にお出ししているため、EmailやDMからお問い合わせください。"}}, {"@type": "Question", "name": "1kgなど、5kg未満でも買えますか？", "acceptedAnswer": {"@type": "Answer", "text": "原則は5kg単位の販売です。5kg/袋の梱包形態で農園から輸入しているためです。5kg未満の小分けはご相談ください。定常サービスとしてお約束できるものではございません。"}}, {"@type": "Question", "name": "サンプルは有料ですか？ 何gですか？", "acceptedAnswer": {"@type": "Answer", "text": "生豆のサンプルは有料です。焙煎のバッチに合わせて任意の数量にてお求めいただけます。"}}, {"@type": "Question", "name": "焙煎済みのサンプルはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "サンプルロースターをお持ちではないロースター様向けに、焙煎豆のサンプルをご用意しております。個人のお客様向けには焙煎豆のサンプルはご提供しておりません。"}}, {"@type": "Question", "name": "サンプルが届くまで、どのくらいかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "生豆のサンプルは、お申込みから3営業日以内に発送いたします。焙煎豆のサンプルは、焙煎のタイミング次第であり、発送までにお時間をいただく可能性もございます。"}}, {"@type": "Question", "name": "送料はいくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "送料はヤマト運輸の法人価格となります。以下が弊社（横浜）からの発送料金です。例えば、5kgのご注文の場合は包材の重量もあり、10kg以内の金額となります。例：東京都への5kgの発送の場合は1,390円（税抜）。"}}, {"@type": "Question", "name": "注文から届くまでの日数は？", "acceptedAnswer": {"@type": "Answer", "text": "ご注文から3営業日以内に発送いたします。発送先にもよりますが、最短ではご注文日の翌日に発送し、翌々日に到着します。"}}, {"@type": "Question", "name": "支払い方法は？", "acceptedAnswer": {"@type": "Answer", "text": "原則は銀行振り込み（前払い）にてお願いしております。請求書に銀行口座を記載しております。"}}, {"@type": "Question", "name": "タイのスペシャルティコーヒーには、どんな特徴がありますか？", "acceptedAnswer": {"@type": "Answer", "text": "標高が高くないこともあり豆自体には尖った酸味はありません。Washは優しい黒糖のような甘みやアーシーさなど農園のテロワールを感じられます。タイでは特殊発酵に挑戦する農家が多くあり、Yosniyom Coffee Farmもその一つです。嫌気性発酵などによりフルーティーさ、ベリー感、チェリー由来の甘さを引き出すプロセスもございます。"}}, {"@type": "Question", "name": "3つのプロセスは、どう選べばいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "毎日のコーヒーとしてはWash、食後の〆にはCarbonic Maceration、特別な一杯はNatural Chaptalizationなど、味わいによってお店のアクセントとなるようなご提案をしております。"}}, {"@type": "Question", "name": "農園を訪問したり、生産者と交流したりすることはできますか？", "acceptedAnswer": {"@type": "Answer", "text": "将来的には農園ツアーなどを企画していきたいと考えております。また、日本でのイベントに農園主を招待するなども検討中です。"}}, {"@type": "Question", "name": "個人でも購入できますか？", "acceptedAnswer": {"@type": "Answer", "text": "原則はロースター様限定ですが、展示会などのイベント時は、個人のお客様へも販売しております。展示会後には、在庫限りで個人のお客様への販売を行う可能性もございます。まずはお問い合わせください。"}}, {"@type": "Question", "name": "継続して購入する場合、優先的に確保してもらえますか？", "acceptedAnswer": {"@type": "Answer", "text": "新クロップの予約や、当年クロップのお取り置きなどを柔軟にいたします。"}}]}
 </script>
 </body>
 </html>
