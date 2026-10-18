@@ -91,13 +91,35 @@ footer{background:var(--dark);border-top:1px solid rgba(139,115,85,.2);padding:2
 @media(max-width:768px){nav .nav-links{display:none}.origin-grid,.about-grid,.contact-grid,.reasons-grid,.origin-video-section,.quality-inner{grid-template-columns:1fr}.lineup-cards{grid-template-columns:1fr;max-width:400px}.origin-specs{grid-template-columns:repeat(2,1fr)}section{padding:4rem 1.5rem}.quality-media{grid-template-columns:1fr 1fr}.lineup-hero{margin:0 -1.5rem 3rem;max-height:340px}.lineup-hero img{aspect-ratio:16/10}.about-photos{gap:.8rem}.about-photos figcaption{font-size:.65rem}.lineup-card-photo{height:240px}.process-detail{margin-top:3.5rem;padding-top:3.5rem}.process-detail-body{grid-template-columns:1fr;gap:2rem}.process-detail-title{font-size:1.4rem}.hero-mark img{width:120px}.hero-mark{margin:0 auto 1.6rem}.hero-headline{font-size:1.25rem;line-height:1.5;letter-spacing:.02em}.hero-line{margin:1.6rem auto}.hero-subcopy{margin-bottom:1.6rem}.hero-subcopy-1{font-size:.85rem;letter-spacing:.08em}.hero-subcopy-2{font-size:.78rem}.hero-status{font-size:.72rem;letter-spacing:.1em;gap:.35rem .7rem;margin:0 auto 2rem}.hero-ctas{gap:.55rem}.hero-cta{padding:.75rem 1.1rem;font-size:.75rem;gap:.45rem}.contact-form-container{padding:1.8rem 1.4rem;margin-top:3rem}.news-item{grid-template-columns:auto auto;gap:.5rem .8rem}.news-title{font-size:.98rem}.news-body{font-size:.85rem}.voice-process-header{flex-direction:column;align-items:flex-start;gap:1.2rem}.voice-process-name{font-size:1.5rem}.voice-card{padding:1.2rem 1.3rem}.voice-comment{font-size:.85rem}}
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}.fade-in.visible{opacity:1;transform:translateY(0)}
 </style>
+<style>
+/* Mobile menu (hamburger) */
+.nav-toggle{display:none;position:relative;width:44px;height:44px;margin-right:-10px;background:none;border:0;cursor:pointer;z-index:102;-webkit-tap-highlight-color:transparent}
+.nav-toggle span{position:absolute;left:11px;width:22px;height:1.5px;background:var(--white);transition:transform .3s ease,opacity .3s ease,background .3s}
+.nav-toggle span:nth-child(1){top:15px}.nav-toggle span:nth-child(2){top:21px}.nav-toggle span:nth-child(3){top:27px}
+nav.scrolled .nav-toggle span{background:var(--dark)}
+nav.open .nav-toggle span{background:var(--white)}
+nav.open .nav-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+nav.open .nav-toggle span:nth-child(2){opacity:0}
+nav.open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  nav.open{background:transparent;box-shadow:none;backdrop-filter:none}
+  nav.open .nav-logo{color:var(--white);position:relative;z-index:102}
+  nav.open .nav-links{display:flex;position:fixed;inset:0;z-index:101;flex-direction:column;justify-content:center;align-items:center;gap:0;margin:0;padding:4rem 2rem;background:rgba(30,24,18,.97)}
+  nav.open .nav-links li{width:100%;max-width:320px;border-bottom:1px solid rgba(255,255,255,.08)}
+  nav.open .nav-links li:last-child{border-bottom:0}
+  nav.open .nav-links a{display:block;padding:1.1rem 0;text-align:center;font-size:1rem;letter-spacing:.15em;color:rgba(255,255,255,.9)}
+  body.menu-open{overflow:hidden}
+}
+</style>
 </head>
 <body>
 
 <nav id="nav">
   <div class="nav-inner">
     <a href="#" class="nav-logo">minamo</a>
-    <ul class="nav-links">
+    <button type="button" class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#origin">農園紹介</a></li>
       <li><a href="#lineup">ラインナップ</a></li>
       <li><a href="#voices">ロースターの声</a></li>
@@ -1268,6 +1290,14 @@ if(contactForm){
     {"@type":"HowToStep","position":8,"name":"最終選別（選別④）","text":"スクリーニングでサイズを揃えた後、ハンドピックで欠点豆を除去。選別を終えた生豆は5kgずつ真空パックされます。"}
   ]
 }
+</script>
+<script>
+(function(){var nav=document.getElementById('nav'),btn=nav.querySelector('.nav-toggle');
+function setOpen(o){nav.classList.toggle('open',o);document.body.classList.toggle('menu-open',o);btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'メニューを閉じる':'メニューを開く');}
+btn.addEventListener('click',function(){setOpen(!nav.classList.contains('open'));});
+nav.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){setOpen(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+window.addEventListener('resize',function(){if(window.innerWidth>768)setOpen(false);});})();
 </script>
 </body>
 </html>
