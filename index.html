@@ -140,6 +140,18 @@ nav.open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)
 .faq-table-note{font-size:.72rem!important;margin-top:.4rem}
 @media(max-width:768px){.faq-a{padding:0 1rem 1.1rem 1rem}.faq-item summary{padding:1rem}}
 </style>
+<style>
+.order-cta{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:3rem}
+.order-cta-card{display:flex;flex-direction:column;gap:.45rem;padding:1.6rem 1.5rem;background:var(--cream);border:1px solid rgba(196,149,106,.35);text-decoration:none;transition:border-color .25s,background .25s}
+.order-cta-card:hover{border-color:var(--brown);background:var(--cream-dark)}
+.order-cta-label{font-family:var(--font-accent);font-size:.66rem;letter-spacing:.25em;color:var(--brown);text-transform:uppercase}
+.order-cta-title{font-size:1rem;color:var(--dark);font-weight:500;line-height:1.5}
+.order-cta-desc{font-size:.82rem;color:var(--text-light);line-height:1.7}
+.order-cta-go{margin-top:.4rem;font-family:var(--font-accent);font-size:.78rem;letter-spacing:.1em;color:var(--accent)}
+.order-cta-note{grid-column:1 / -1;font-size:.75rem;color:var(--text-light);margin-top:.2rem}
+.order-cta-note a{color:var(--accent)}
+@media(max-width:768px){.order-cta{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
@@ -942,6 +954,22 @@ nav.open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)
           <div class="terms-contact-row"><span class="terms-contact-label">Instagram</span><a href="https://instagram.com/minamo_asia" target="_blank">@minamo_asia</a></div>
         </div>
       </div>
+    </div>
+
+    <div class="order-cta fade-in">
+      <a href="order.html" class="order-cta-card">
+        <span class="order-cta-label">Order — 2026 Crop</span>
+        <span class="order-cta-title">2026年クロップ 注文・お見積り依頼</span>
+        <span class="order-cta-desc">在庫分のご注文・お見積りはこちらのフォームから。</span>
+        <span class="order-cta-go">フォームへ ▶</span>
+      </a>
+      <a href="reserve.html" class="order-cta-card">
+        <span class="order-cta-label">Pre-order — 2027 Crop</span>
+        <span class="order-cta-title">2027年クロップ 予約・新ロット希望登録</span>
+        <span class="order-cta-desc">既存3プロセスの仮予約と、新ラインナップへのご希望を受け付けています。</span>
+        <span class="order-cta-go">フォームへ ▶</span>
+      </a>
+      <p class="order-cta-note">※各フォームはロースター様限定です。個人のお客様はEmail・DM、または<a href="#contact">お問い合わせフォーム</a>からご連絡ください。</p>
     </div>
   </div>
 </section>
