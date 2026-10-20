@@ -148,7 +148,7 @@ nav.open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)
 .order-cta-title{font-size:1rem;color:var(--dark);font-weight:500;line-height:1.5}
 .order-cta-desc{font-size:.82rem;color:var(--text-light);line-height:1.7}
 .order-cta-go{margin-top:.4rem;font-family:var(--font-accent);font-size:.78rem;letter-spacing:.1em;color:var(--accent)}
-.order-cta-note{grid-column:1 / -1;font-size:.75rem;color:var(--text-light);margin-top:.2rem}
+.order-cta.single{grid-template-columns:1fr}.order-cta-note{grid-column:1 / -1;font-size:.75rem;color:var(--text-light);margin-top:.2rem}
 .order-cta-note a{color:var(--accent)}
 @media(max-width:768px){.order-cta{grid-template-columns:1fr}}
 </style>
@@ -964,19 +964,21 @@ nav.open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)
       </div>
     </div>
 
-    <div class="order-cta fade-in">
+    <div class="order-cta single fade-in">
       <a href="order.html" class="order-cta-card">
         <span class="order-cta-label">Order — 2026 Crop</span>
         <span class="order-cta-title">2026年クロップ 注文・お見積り依頼</span>
         <span class="order-cta-desc">在庫分のご注文・お見積りはこちらのフォームから。</span>
         <span class="order-cta-go">フォームへ ▶</span>
       </a>
+      <!-- 2027年クロップ予約カード：12月上旬、またはCM完売時に復活させる（あわせて親の div.order-cta の class から single を外す）
       <a href="reserve.html" class="order-cta-card">
         <span class="order-cta-label">Pre-order — 2027 Crop</span>
         <span class="order-cta-title">2027年クロップ 予約・新ロット希望登録</span>
         <span class="order-cta-desc">Yosniyom Coffee Farm既存3プロセスの仮予約と、タイ国内の農園からの新ラインナップへのご希望を受け付けています。</span>
         <span class="order-cta-go">フォームへ ▶</span>
       </a>
+      -->
       <p class="order-cta-note">※各フォームはロースター様限定です。個人のお客様はEmail・DM、または<a href="#contact">お問い合わせフォーム</a>からご連絡ください。</p>
     </div>
   </div>
